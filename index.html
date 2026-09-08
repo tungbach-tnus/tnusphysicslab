@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TNUS Physics Lab</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background: #f5f7fb;
+            color: #1f2937;
+        }
+
+        header {
+            background: #ffffff;
+            padding: 20px 8%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 1px solid #e5e7eb;
+        }
+
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+            color: #2563eb;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #374151;
+            margin-left: 25px;
+        }
+
+        .hero {
+            text-align: center;
+            padding: 90px 20px;
+            background: linear-gradient(135deg, #e0f2fe, #eef2ff);
+        }
+
+        .hero h1 {
+            font-size: 48px;
+            margin-bottom: 20px;
+        }
+
+        .hero p {
+            font-size: 20px;
+            color: #4b5563;
+            margin-bottom: 30px;
+        }
+
+        .search {
+            width: min(600px, 90%);
+            padding: 16px 20px;
+            border: none;
+            border-radius: 30px;
+            font-size: 16px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+        }
+
+        .container {
+            width: 84%;
+            max-width: 1200px;
+            margin: 50px auto;
+        }
+
+        .container h2 {
+            margin-bottom: 25px;
+        }
+
+        .categories {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 20px;
+        }
+
+        .card {
+            background: white;
+            padding: 30px 20px;
+            border-radius: 15px;
+            text-align: center;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.06);
+            transition: 0.2s;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+        }
+
+        .card .icon {
+            font-size: 40px;
+            margin-bottom: 15px;
+        }
+
+        .lessons {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+        }
+
+        .lesson {
+            background: white;
+            padding: 25px;
+            border-radius: 15px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.06);
+        }
+
+        .lesson h3 {
+            margin-bottom: 10px;
+        }
+
+        .lesson p {
+            color: #6b7280;
+            margin-bottom: 15px;
+        }
+
+        .button {
+            display: inline-block;
+            padding: 10px 18px;
+            background: #2563eb;
+            color: white;
+            text-decoration: none;
+            border-radius: 8px;
+        }
+
+        footer {
+            text-align: center;
+            padding: 30px;
+            margin-top: 60px;
+            background: #111827;
+            color: white;
+        }
+
+        @media (max-width: 800px) {
+            .categories,
+            .lessons {
+                grid-template-columns: 1fr 1fr;
+            }
+
+            .hero h1 {
+                font-size: 36px;
+            }
+        }
+
+        @media (max-width: 500px) {
+            .categories,
+            .lessons {
+                grid-template-columns: 1fr;
+            }
+
+            nav {
+                display: none;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <div class="logo">🔬 TNUS Physics Lab</div>
+
+    <nav>
+        <a href="#">Trang chủ</a>
+        <a href="#">Kho bài giảng</a>
+        <a href="#">Về chúng tôi</a>
+    </nav>
+</header>
+
+<section class="hero">
+    <h1>TNUS Physics Lab</h1>
+
+    <p>
+        Kho ý tưởng và thiết kế bài giảng Vật lý
+    </p>
+
+    <input
+        class="search"
+        type="text"
+        placeholder="🔎 Tìm kiếm ý tưởng bài giảng..."
+    >
+</section>
+
+<section class="container">
+
+    <h2>📚 Khám phá theo chủ đề</h2>
+
+    <div class="categories">
+
+        <div class="card">
+            <div class="icon">⚙️</div>
+            <h3>Cơ học</h3>
+        </div>
+
+        <div class="card">
+            <div class="icon">⚡</div>
+            <h3>Điện học</h3>
+        </div>
+
+        <div class="card">
+            <div class="icon">🧲</div>
+            <h3>Từ học</h3>
+        </div>
+
+        <div class="card">
+            <div class="icon">🌊</div>
+            <h3>Sóng</h3>
+        </div>
+
+    </div>
+
+</section>
+
+<section class="container">
+
+    <h2>💡 Ý tưởng mới nhất</h2>
+
+    <div class="lessons">
+
+        <div class="lesson">
+            <h3>Định luật Lenz</h3>
+            <p>
+                Khám phá định luật Lenz thông qua thí nghiệm
+                cảm ứng điện từ.
+            </p>
+            <a class="button" href="bai1.pdf">
+                Xem tài liệu
+            </a>
+        </div>
+
+        <div class="lesson">
+            <h3>Dao động điều hòa</h3>
+            <p>
+                Ý tưởng thiết kế hoạt động khám phá
+                dao động điều hòa.
+            </p>
+            <a class="button" href="#">
+                Xem bài
+            </a>
+        </div>
+
+        <div class="lesson">
+            <h3>STEM Vật lý</h3>
+            <p>
+                Các ý tưởng dự án STEM dành cho
+                học sinh phổ thông.
+            </p>
+            <a class="button" href="#">
+                Xem bài
+            </a>
+        </div>
+
+    </div>
+
+</section>
+
+<footer>
+    © 2026 TNUS Physics Lab
+</footer>
+
+</body>
+</html>
